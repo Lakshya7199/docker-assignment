@@ -6,7 +6,7 @@ services:
     networks:
       - app-network
     volumes:
-    - /home/srinibasmisra/docker-demos/backend:/app
+    - /home/lakshya/docker-demos/backend:/app
   frontend:
     container_name: frontend
     image: app-frontend:1
@@ -15,7 +15,7 @@ services:
     networks:
       - app-network
     volumes:
-    - /home/srinibasmisra/docker-demos/frontend:/usr/share/nginx/html
+    - /home/lakshya/docker-demos/frontend:/usr/share/nginx/html
     depends_on:
       - backend
 networks:
