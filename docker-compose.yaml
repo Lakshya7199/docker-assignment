@@ -9,7 +9,7 @@ services:
     - /home/lakshya/docker-demos/backend:/app
   frontend:
     container_name: frontend
-    image: app-frontend:1
+    image: app-frontend
     ports:
       - "80:80"
     networks:
