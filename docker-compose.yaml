@@ -1,23 +1,23 @@
-version: "3.8"
+version: "3.3"
 services:
   backend:
     container_name: backend
-    image: app-backend
+    image: back
     networks:
-      - app-network
+      - network
     volumes:
     - /var/lib/jenkins/workspace/docker-pipeline/backend:/app
   frontend:
     container_name: frontend
-    image: app-frontend
+    image: front
     ports:
       - "80:80"
     networks:
-      - app-network
+      - network
     volumes:
     - /var/lib/jenkins/workspace/docker-pipeline/frontend:/usr/share/nginx/html
     depends_on:
       - backend
 networks:
-  app-network:
+  network:
     driver: bridge
