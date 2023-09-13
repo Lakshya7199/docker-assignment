@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   backend:
-    container_name: backend-1
+    container_name: backend-2
     image: app-backend
     networks:
       - app-network
