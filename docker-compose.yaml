@@ -2,14 +2,14 @@ version: "3.3"
 services:
   backend:
     container_name: backend
-    image: back
+    image: backend
     networks:
       - network
     volumes:
     - /var/lib/jenkins/workspace/docker-pipeline/backend:/app
   frontend:
     container_name: frontend
-    image: front
+    image: frontend
     ports:
       - "80:80"
     networks:
