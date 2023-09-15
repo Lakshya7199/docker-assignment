@@ -14,6 +14,7 @@ pipeline{
                   extensions: [], 
                   submoduleCfg: [], 
                   userRemoteConfigs: [[url: 'https://github.com/Lakshya7199/docker-assignment.git']]])
+        sh "git clone https://github.com/Lakshya7199/docker-assignment.git"
             }
         }
 
