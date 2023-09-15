@@ -6,11 +6,17 @@ pipeline{
                 deleteDir()
             }
         }
-        stage("clone repo"){
+        stage("Checkout Code") {
             steps {
-                sh "git clone https://github.com/Lakshya7199/docker-assignment.git"
+        checkout([$class: 'GitSCM', 
+                  branches: [[name: '*/master']],  // Specify the branch you want to checkout
+                  doGenerateSubmoduleConfigurations: false, 
+                  extensions: [], 
+                  submoduleCfg: [], 
+                  userRemoteConfigs: [[url: 'https://github.com/Lakshya7199/docker-assignment.git']]])
             }
         }
+
         stage("Build"){
             steps{
                 dir("docker-assignment/backend"){
