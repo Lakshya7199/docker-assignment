@@ -15,12 +15,12 @@ pipeline{
             steps{
                 dir("docker-assignment/backend"){
                     
-                    sh "docker build -t app-backend . "
+                    sh "docker build -t backend . "
                     
                 }
                 dir("docker-assignment/frontend"){
                     
-                    sh "docker build -t app-frontend . "
+                    sh "docker build -t frontend . "
                     
                 }
                 dir("docker-assignment"){
