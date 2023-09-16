@@ -6,22 +6,21 @@ pipeline{
                 deleteDir()
             }
         }
-        stage("Checkout Code") {
+        stage("clone repo"){
             steps {
                 sh "git clone https://github.com/Lakshya7199/docker-assignment.git"
             }
         }
-
         stage("Build"){
             steps{
                 dir("docker-assignment/backend"){
                     
-                    sh "docker build -t backend . "
+                    sh "docker build -t back . "
                     
                 }
                 dir("docker-assignment/frontend"){
                     
-                    sh "docker build -t frontend . "
+                    sh "docker build -t front . "
                     
                 }
                 dir("docker-assignment"){
