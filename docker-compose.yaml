@@ -6,7 +6,7 @@ services:
     networks:
       - network
     volumes:
-    - /var/lib/jenkins/workspace/l/docker-assignment/backend:/app
+    - /var/lib/jenkins/workspace/docker-pipeline/docker-assignment/backend:/app
   frontend:
     container_name: frontend
     image: frontend
@@ -15,7 +15,7 @@ services:
     networks:
       - network
     volumes:
-    - /var/lib/jenkins/workspace/l/docker-assignment/frontend:/usr/share/nginx/html
+    - /var/lib/jenkins/workspace/docker-pipeline/docker-assignment/frontend:/usr/share/nginx/html
     depends_on:
       - backend
 networks:
