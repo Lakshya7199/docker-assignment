@@ -8,7 +8,7 @@ cors = CORS(app, resources={r"*": {"origins": "*"}})
 @app.route("/generate")
 def index():
     random_string = ''.join(random.choice(string.ascii_letters) for i in range(10))
-    return "v18-" + random_string
+    return "v19-" + random_string
 
 if __name__=="__main__":
     app.run(host='0.0.0.0', debug=True)
